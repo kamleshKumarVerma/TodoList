@@ -1,0 +1,20 @@
+<div class="custom-container top-margin">
+	<div class="header">
+		<h2>Add your task here!</h2>
+		<input type="text" placeholder="Enter Task Description" #task>
+		<span (click)="addTask(task)" class="addBtn">Add Task</span>
+	</div>
+	<div *ngIf="errorMessage.length">
+       <div class="error-meesage">{{errorMessage}}</div>
+    </div>
+    <div *ngIf="!taskList.length" class="no-task">
+		<h3><strong>There are no any task</strong></h3>
+		<small>Add your Todo Task</small>
+	</div>
+	<ul>
+		<li *ngFor="let task of taskList" [ngClass]="task.status === 'completed'? 'checked' : ''">
+			<div (click)="changeTaskStatus(task)">{{task.name}}</div>
+			<div class="close" (click)="removeTask(task.id)">X</div>
+		</li>
+	</ul>
+</div>

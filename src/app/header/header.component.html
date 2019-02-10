@@ -1,0 +1,11 @@
+<div class="header">
+	<div class="container">
+	  <a routerLink="home" class="logo">TodoList</a>
+	  <div class="header-right">
+	  	<div *ngIf="authService.isUserAuthorised && user" class="auth-user">
+			<a class="username">Hi {{user.username}}</a>
+	    	<a class="logout" (click)="userLogout()">Logout</a>
+		</div>
+	  </div>
+	</div>
+</div>

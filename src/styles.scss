@@ -1,1 +1,107 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* ====================
+      Global CSS 
+ ====================== */
+
+body {
+  background-color: #ebeced !important;
+  overflow-x: hidden;
+  margin: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.centerLoading {
+  display : block;
+  position : fixed;
+  z-index: 100;
+  background-image : url(./assets/images/center-loading.gif);
+  background-repeat : no-repeat;
+  background-position : center;
+  left : 0;
+  bottom : 0;
+  right : 0;
+  top : 0;
+}
+
+.centered {
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box {
+  border: 1px solid lightpink;
+  box-shadow: 4px 4px 5px;
+  padding: 20px;
+  text-align: center;
+  width: 400px;
+}
+
+@media only screen and (max-width: 600px) {
+  .box {
+    width: 313px;
+  }
+}
+
+input[type=email], input[type=password], input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.submit {
+  width: 100%;
+  padding: 15px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: left;
+  padding: 0px;
+  margin-left: 5px;
+}
+
+.error-meesage {
+  font-size: 15px;
+  text-align: center;
+  padding: 6px;
+  margin-top: 13px;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  opacity: 0.6;
+}
+
+.success-meesage {
+  font-size: 15px;
+  text-align: center;
+  padding: 6px;
+  margin-top: 13px;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  opacity: 0.6;
+}
+
+.sub-text {
+  padding: 13px;
+}
