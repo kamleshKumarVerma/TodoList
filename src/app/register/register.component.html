@@ -1,48 +1,50 @@
-<div class="centered">
-	<div class="container">
-		<div class="box">
-			<h1>Register</h1>
-			<form [formGroup]="registerForm">
-		        <div>
-		           	<input type="email" placeholder="Enter Email" formControlName="email" required/>
-				    <div class="error" *ngIf="registerForm.controls['email'].hasError('pattern') && registerForm.controls['email'].touched">
-				      Email Not Valid!
-				    </div>
-		        </div>
+<div class="register-banner">
+	<div class="centered">
+		<div class="container">
+			<div class="box">
+				<h1>Register</h1>
+				<form [formGroup]="registerForm">
+			        <div>
+			           	<input type="email" placeholder="Enter Email" formControlName="email" required/>
+					    <div class="error" *ngIf="registerForm.controls['email'].hasError('pattern') && registerForm.controls['email'].touched">
+					      Email Not Valid!
+					    </div>
+			        </div>
 
-		        <div>
-		           	<input type="text" placeholder="Enter Username" formControlName="username" required/>
-				    <div class="error" *ngIf="registerForm.controls['username'].hasError('minlength') && registerForm.controls['username'].touched">
-				      User name length should be at least 3 character
-				    </div>
-		        </div>
+			        <div>
+			           	<input type="text" placeholder="Enter Username" formControlName="username" required/>
+					    <div class="error" *ngIf="registerForm.controls['username'].hasError('minlength') && registerForm.controls['username'].touched">
+					      User name length should be at least 3 character
+					    </div>
+			        </div>
 
-		        <div>
-		           	<input type="password" placeholder="Enter Password" formControlName="password" required/>
-				    <div class="error" *ngIf="registerForm.controls['password'].hasError('minlength') && registerForm.controls['password'].touched">
-				      Password length should be at least 4 character
-				    </div>
-		        </div>
+			        <div>
+			           	<input type="password" placeholder="Enter Password" formControlName="password" required/>
+					    <div class="error" *ngIf="registerForm.controls['password'].hasError('minlength') && registerForm.controls['password'].touched">
+					      Password length should be at least 4 character
+					    </div>
+			        </div>
 
-		        <div>
-		           <button class="submit" [disabled]="!registerForm.valid" (click)="userRegister()">
-						Register
-		           </button>
-		        </div>
+			        <div>
+			           <button class="submit" [disabled]="!registerForm.valid" (click)="userRegister()">
+							Register
+			           </button>
+			        </div>
 
-		        <div *ngIf="errorMessage.length">
-		           <div class="error-meesage">{{errorMessage}}</div>
-		        </div>
+			        <div *ngIf="errorMessage.length">
+			           <div class="error-meesage">{{errorMessage}}</div>
+			        </div>
 
-		        <div *ngIf="successMessage.length">
-		           <div class="success-meesage">{{successMessage}}</div>
-		        </div>
+			        <div *ngIf="successMessage.length">
+			           <div class="success-meesage">{{successMessage}}</div>
+			        </div>
 
-		        <div class="sub-text">
-		        	<label>Already a member? <a routerLink="/login"> Login Now</a></label>
-		        </div>
-		    </form>
+			        <div class="sub-text">
+			        	<label>Already a member? <a routerLink="/login"> Login Now</a></label>
+			        </div>
+			    </form>
 
+			</div>
 		</div>
 	</div>
 </div>

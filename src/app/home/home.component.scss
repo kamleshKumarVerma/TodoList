@@ -1,4 +1,4 @@
-.banner{
+.banner {
 	background-image : url(../../assets/images/banner-blog.jpg);
 	text-align: center;
     color: #fff;   
@@ -11,10 +11,12 @@
     -o-background-size: cover;
     background-size: cover;
 }
+
 .banner-text {
 	padding:200px 0 150px 0;
 }
-.banner-heading{
+
+.banner-heading {
 	font-family: 'Lobster', cursive;
 	font-size: 75px;
     font-weight: 700;
@@ -22,7 +24,8 @@
     margin-bottom: 30px;
 	color:#000;
 }
-.banner-sub-heading{
+
+.banner-sub-heading {
 	font-family: 'Libre Baskerville', serif;
 	font-size: 30px;
     font-weight: 300;
@@ -31,18 +34,21 @@
 	color:#fff;
 }
 
-.btn-banner{
-	padding:5px 20px;
-	border-radius:10px;
-	font-weight:700;
-	line-height:1.5;
-	text-align:center;
-	color:#000;
-	text-transform:uppercase;
+.btn-banner {
+	padding: 11px 44px;
+    border-radius: 10px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    background: #222;
+    opacity: 0.5;
 }
-.text-intro{
+
+.text-intro {
 	width:90%;
 	margin:auto;
 	text-align:center;
-	padding-top:30px;
+	padding: 40px;
 }

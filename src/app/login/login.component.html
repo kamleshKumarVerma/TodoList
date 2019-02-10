@@ -1,31 +1,34 @@
-<div class="centered">
-	<div class="container">
-		<div class="box">
-			<h1>Login</h1>
-			<form [formGroup]="loginForm">
-		        <div>
-		           	<input type="text" placeholder="Enter Username" formControlName="username" required/>
-		        </div>
+<div class="login-banner">
+	<div class="centered">
+		<div class="container">
+			<div class="box">
+				<h1>Login</h1>
+				<form [formGroup]="loginForm">
+			        <div>
+			           	<input type="text" placeholder="Enter Username" formControlName="username" required/>
+			        </div>
 
-		        <div>
-		           	<input type="password" placeholder="Enter Password" formControlName="password" required/>
-		        </div>
+			        <div>
+			           	<input type="password" placeholder="Enter Password" formControlName="password" required/>
+			        </div>
 
-		        <div>
-		           <button class="submit" [disabled]="!loginForm.valid" (click)="userLogin()">
-						LOGIN
-		           </button>
-		        </div>
+			        <div>
+			           <button class="submit" [disabled]="!loginForm.valid" (click)="userLogin()">
+							LOGIN
+			           </button>
+			        </div>
 
-		        <div *ngIf="errorMessage.length">
-		           <div class="error-meesage">{{errorMessage}}</div>
-		        </div>
+			        <div *ngIf="errorMessage.length">
+			           <div class="error-meesage">{{errorMessage}}</div>
+			        </div>
 
-		        <div class="sub-text">
-		        	<label>Not a member? <a routerLink="/register"> Register Now</a></label>
-		        </div>
-		    </form>
+			        <div class="sub-text">
+			        	<label>Not a member? <a routerLink="/register"> Register Now</a></label>
+			        </div>
+			    </form>
 
+			</div>
 		</div>
 	</div>
 </div>
+
